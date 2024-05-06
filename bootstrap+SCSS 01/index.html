@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./estilo/style.css">
 </head>
 <body>
     <header class="destaque-header">
-        <h1>Kaique Vieira</h1>
+        <h1 class="title is-1">Kaique Vieira</h1>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Certificações</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contato</a></li>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Certificações</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
             </ul>
         </nav>
         <div class="modo-claro-escuro">
-            <button id="modo-toggle" onclick="toggleDarkMode()" class="darkMode">🌞</button>
+            <button id="modo-toggle" onclick="toggleDarkMode()" class="darkMode btnDark">🌞</button>
         </div>
     </header>
     <hr>
     <section class="destaque-hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h2 class="item1">Bem-vindo</h2>
-                <p class="item2">Olá, meu nome é Kaique Vieira e atualmente estou estudando programação na <a href="">ETEC</a>. Antes de ingressar nessa graduação em técnico de desenvolvimento de sistemas, já tinha uma trajetória na área.</p>
-                <p class="item3">Em 2018, iniciei minha jornada com formações em cursos de lógica de algoritmos, Java, Java POO e Python, todos pela <a href="">Curso em vídeo</a> totalizando um processo de 2 anos e meio de aprendizado. Durante a pandemia, decidi investir no curso profissionalizante da <a href="">OneBitCode</a>, onde aprofundei meus conhecimentos em frameworks, APIs e linguagens fundamentais para a programação web.</p>
-                <p class="item4">Atualmente, em 2024, estou focado em me tornar um desenvolvedor mobile e estou em busca da minha primeira oportunidade para colocar em prática todo esse conhecimento adquirido.</p>
-                <button class="botao-download item5">Baixar Currículo</button>
+                <h2 class="subtitle is-2">Bem-vindo</h2>
+                <p class="content">Olá, meu nome é Kaique Vieira e atualmente estou estudando programação na <a href="#">ETEC</a>. Antes de ingressar nessa graduação em técnico de desenvolvimento de sistemas, já tinha uma trajetória na área.</p>
+                <p class="content">Em 2018, iniciei minha jornada com formações em cursos de lógica de algoritmos, Java, Java POO e Python, todos pela <a href="#">Curso em vídeo</a> totalizando um processo de 2 anos e meio de aprendizado. Durante a pandemia, decidi investir no curso profissionalizante da <a href="#">OneBitCode</a>, onde aprofundei meus conhecimentos em frameworks, APIs e linguagens fundamentais para a programação web.</p>
+                <p class="content">Atualmente, em 2024, estou focado em me tornar um desenvolvedor mobile e estou em busca da minha primeira oportunidade para colocar em prática todo esse conhecimento adquirido.</p>
+                <button class="button botao-download">Baixar Currículo</button>
             </div>
             <img src="img/kaiqueVieira.jpg" alt="" class="item6">
         </div>

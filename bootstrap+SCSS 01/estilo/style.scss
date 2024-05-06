@@ -1,0 +1,43 @@
+$cor-fundo-claro: #ffffff;
+$cor-texto-claro: #333333;
+$cor-fundo-escuro: #333333;
+$cor-texto-escuro: #ffffff;
+
+body {
+    background-color: $cor-fundo-claro;
+    color: $cor-texto-claro;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode body {
+    background-color: $cor-fundo-escuro;
+    color: $cor-texto-escuro;
+}
+
+.modo-claro-escuro {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-download {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-download:hover {
+    background-color: #0056b3;
+}
