@@ -4,83 +4,128 @@
 $grey: #445964;
 $darkGrey: #263138;
 $softGrey: #DFDFDF;
-$corFundo: #F9F9F9;
+$corFundo: #F8F8F8;
 
 *{
     padding: 0;
     margin: 0;
 }
-body{
+div.fullContainer{
     background-color: $corFundo;
 }
-nav{
-    display: flex;
-    align-items: center;
-  
-    div.navLogo{
-      display: flex;
-      align-items: center;
-      margin-left: 1vw;
-      gap: 1vw;
-        h1{
-            margin-top: 3vh;
-            font-family: "Roboto";
-            color: $grey;
-            font-weight: 700;
+div.divNav{
+    background-color: #FFF;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    nav{
+        align-items: center;
+        div.navLogo{
+        display: flex;
+        align-items: center;
+        margin-left: 1vw;   
+        justify-content: flex-start;
+            h1{
+                margin-left: 2vw;
+                margin-top: 2.5vh;
+                font-family: "Roboto";
+                color: $grey;
+                font-weight: 700;
+            }
+            img{
+                height: 8vh;
+            }
         }
-        img{
-            height: 8vh;
+    }
+        ul{
+        display: flex;
+        justify-content: flex-end;
+        li{
+            list-style: none;
+            a{
+                p{
+                    font-size: 3vh;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: $grey;
+                }
+            }
+        }
+        } 
+    
+    div.navCores{
+        display: flex;
+        align-items: center;
+        p{
+            margin-left: 1vw;
+            margin-right: 1vw;
+            font-size: 4.5vh;
+            color: $grey;
+        }
         }
     }
   
-    ul{
-      display: flex;
-      flex-direction: row;
-      li{
-        list-style: none;
-        a{
-            p{
-                font-size: 3vh;
-                font-weight: 400;
-                text-decoration: none;
+  
+section.entradaSite{
+    display: flex;
+    gap: 30vw;
+    height: 100vh;
+    flex-wrap: wrap;
+    padding-top: 20vh;
+    div.btnRedes{
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+    div.entradaSite{ 
+        margin-left: 6vw;
+        div.entradaApresentacao{
+            margin-top: 5vh;
+        }
+        h2{
+            font-size: 6vh;
+            font-weight: 400;
+            font-family: "Roboto";
+            color: $grey;
+        }
+        h1{
+            font-size: 7vh;
+            font-weight: 600;
+            color: $grey;
+            font-family: "Roboto";
+        }
+        div.divBtn{
+            display: flex;
+            justify-content: center;
+            button{    
+                border-radius: 20px;
+                font-size: 3vh; 
+                height: 10vh;
+                width: 20vw;
+                font-weight: 700;  
+                background-color: $darkGrey;
+            }
+        }
+        div.divRedes{
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            margin-top: 1vh;
+            i{
+                font-size: 5.5vh;
                 color: $grey;
             }
         }
-      }
-    } 
-  
-   div.navCores{
-      display: flex;
-      align-items: center;
-      p{
-        margin-left: 1vw;
-        margin-right: 1vw;
-        font-size: 4.5vh;
-        color: $grey;
-      }
+        
     }
-  }
-  
-  
-section.apresentacao{
-    display: flex;
-    margin-top: 10vh;
-    gap: 35vw;
-    flex-wrap: wrap;
-    div.apresentacaoEquipe01{ 
-        margin-left: 4vw;
-        button{
-            
-            background-color: $darkGrey;
-        }
-        h2{
-            font-size: "Roboto";
-        }
-    }
-    div.apresentacaoEquipe02{
+    div.entradaSite02{
+        display: flex;
+
         img{
             border-radius: 50%;
-            width: 25vw;
+            height: 37vw;
         }
     }
 }

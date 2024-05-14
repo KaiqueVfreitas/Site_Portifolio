@@ -4,69 +4,117 @@
   margin: 0;
 }
 
-body {
-  background-color: #F9F9F9;
+div.fullContainer {
+  background-color: #F8F8F8;
 }
 
-nav {
-  display: flex;
+div.divNav {
+  background-color: #FFF;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+}
+div.divNav nav {
   align-items: center;
 }
-nav div.navLogo {
+div.divNav nav div.navLogo {
   display: flex;
   align-items: center;
   margin-left: 1vw;
-  gap: 1vw;
+  justify-content: flex-start;
 }
-nav div.navLogo h1 {
-  margin-top: 3vh;
+div.divNav nav div.navLogo h1 {
+  margin-left: 2vw;
+  margin-top: 2.5vh;
   font-family: "Roboto";
   color: #445964;
   font-weight: 700;
 }
-nav div.navLogo img {
+div.divNav nav div.navLogo img {
   height: 8vh;
 }
-nav ul {
+div.divNav ul {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
 }
-nav ul li {
+div.divNav ul li {
   list-style: none;
 }
-nav ul li a p {
+div.divNav ul li a p {
   font-size: 3vh;
   font-weight: 400;
   text-decoration: none;
   color: #445964;
 }
-nav div.navCores {
+div.divNav div.navCores {
   display: flex;
   align-items: center;
 }
-nav div.navCores p {
+div.divNav div.navCores p {
   margin-left: 1vw;
   margin-right: 1vw;
   font-size: 4.5vh;
   color: #445964;
 }
 
-section.apresentacao {
+section.entradaSite {
   display: flex;
-  margin-top: 10vh;
-  gap: 35vw;
+  gap: 30vw;
+  height: 100vh;
   flex-wrap: wrap;
+  padding-top: 20vh;
 }
-section.apresentacao div.apresentacaoEquipe01 {
-  margin-left: 4vw;
+section.entradaSite div.btnRedes {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
 }
-section.apresentacao div.apresentacaoEquipe01 button {
+section.entradaSite div.entradaSite {
+  margin-left: 6vw;
+}
+section.entradaSite div.entradaSite div.entradaApresentacao {
+  margin-top: 5vh;
+}
+section.entradaSite div.entradaSite h2 {
+  font-size: 6vh;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: #445964;
+}
+section.entradaSite div.entradaSite h1 {
+  font-size: 7vh;
+  font-weight: 600;
+  color: #445964;
+  font-family: "Roboto";
+}
+section.entradaSite div.entradaSite div.divBtn {
+  display: flex;
+  justify-content: center;
+}
+section.entradaSite div.entradaSite div.divBtn button {
+  border-radius: 20px;
+  font-size: 3vh;
+  height: 10vh;
+  width: 20vw;
+  font-weight: 700;
   background-color: #263138;
 }
-section.apresentacao div.apresentacaoEquipe01 h2 {
-  font-size: "Roboto";
+section.entradaSite div.entradaSite div.divRedes {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  margin-top: 1vh;
 }
-section.apresentacao div.apresentacaoEquipe02 img {
+section.entradaSite div.entradaSite div.divRedes i {
+  font-size: 5.5vh;
+  color: #445964;
+}
+section.entradaSite div.entradaSite02 {
+  display: flex;
+}
+section.entradaSite div.entradaSite02 img {
   border-radius: 50%;
-  width: 25vw;
+  height: 37vw;
 }/*# sourceMappingURL=style.css.map */
