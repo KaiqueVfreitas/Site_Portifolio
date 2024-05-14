@@ -14,38 +14,54 @@ body{
     background-color: $corFundo;
 }
 nav{
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    display: flex;
     align-items: center;
-    h1{
-        font-size: 6vh;
-        font-weight: 700;
-        color: $grey;
-    }
-    div{
-        margin-left: 1vw;
-        margin-right: 1vw;
-        margin-top: 0.6vh;
-        p{
-            font-size: 3.5vh;
-            color: $darkGrey;
+  
+    div.navLogo{
+      display: flex;
+      align-items: center;
+      margin-left: 1vw;
+      gap: 1vw;
+        h1{
+            margin-top: 3vh;
+            font-family: "Roboto";
+            color: $grey;
+            font-weight: 700;
+        }
+        img{
+            height: 8vh;
         }
     }
-    ul {
-        display: inline-grid;
-        grid-auto-flow: column;
-        gap: 1vw;
+  
+    ul{
+      display: flex;
+      flex-direction: row;
+      li{
         list-style: none;
-        li {
-            display: inline;
+        a{
             p{
-                font-size: 2.5vh;
-                font-weight: 300;
-                color: $darkGrey;
+                font-size: 3vh;
+                font-weight: 400;
+                text-decoration: none;
+                color: $grey;
             }
         }
+      }
+    } 
+  
+   div.navCores{
+      display: flex;
+      align-items: center;
+      p{
+        margin-left: 1vw;
+        margin-right: 1vw;
+        font-size: 4.5vh;
+        color: $grey;
+      }
     }
-}
+  }
+  
+  
 section.apresentacao{
     display: flex;
     margin-top: 10vh;

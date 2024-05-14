@@ -9,37 +9,46 @@ body {
 }
 
 nav {
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  display: flex;
   align-items: center;
 }
-nav h1 {
-  font-size: 6vh;
-  font-weight: 700;
-  color: #445964;
-}
-nav div {
+nav div.navLogo {
+  display: flex;
+  align-items: center;
   margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 0.6vh;
+  gap: 1vw;
 }
-nav div p {
-  font-size: 3.5vh;
-  color: #263138;
+nav div.navLogo h1 {
+  margin-top: 3vh;
+  font-family: "Roboto";
+  color: #445964;
+  font-weight: 700;
+}
+nav div.navLogo img {
+  height: 8vh;
 }
 nav ul {
-  display: inline-grid;
-  grid-auto-flow: column;
-  gap: 1vw;
-  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 nav ul li {
-  display: inline;
+  list-style: none;
 }
-nav ul li p {
-  font-size: 2.5vh;
-  font-weight: 300;
-  color: #263138;
+nav ul li a p {
+  font-size: 3vh;
+  font-weight: 400;
+  text-decoration: none;
+  color: #445964;
+}
+nav div.navCores {
+  display: flex;
+  align-items: center;
+}
+nav div.navCores p {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 4.5vh;
+  color: #445964;
 }
 
 section.apresentacao {
