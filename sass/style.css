@@ -117,4 +117,32 @@ section.entradaSite div.entradaSite02 {
 section.entradaSite div.entradaSite02 img {
   border-radius: 50%;
   height: 37vw;
+}
+
+section.sobreMim div.sobre {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section.sobreMim div.sobre img {
+  width: 23vw;
+  border-radius: 50%;
+}
+section.sobreMim div.sobre p {
+  font-size: 4vh;
+  margin: 1vh 2vw 0.4vh 2vw;
+}
+section.sobreMim div.sobre h3 {
+  font-size: 10vh;
+}
+section.sobreMim div.habilidades {
+  margin: 1vh 3vw 1vh 3vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10vw;
+}
+section.sobreMim div.habilidades i {
+  font-size: 4vh;
 }/*# sourceMappingURL=style.css.map */
