@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Fundo escuro */
+    color: #E0E0E0; /* Texto claro */
+}
+
+nav {
+    background-color: #2C3E50; /* Cor fria para a navbar */
+    color: white;
+    padding: 1.5vw;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 10vw;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-img {
+    border-radius: 50%;
+    width: 20vw;
+    margin-right: 6vw;
+}
+
+.descricao {
+    max-width: 60vw;
+}
+
+.redes-sociais {
+    margin-top: 1vh;
+}
+i{
+    margin-right: 1vw;
+}
+.redes-sociais button {
+    background-color: #333333; /* Cor mais escura para os botões */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.5s ease;
+}
+
+.redes-sociais button:hover {
+    color: white;
+}
+
+.redes-sociais button.linkedin:hover {
+    background: linear-gradient(45deg, #004182, #0077b5);
+}
+
+.redes-sociais button.whatsapp:hover {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+}
+
+.redes-sociais button.instagram:hover {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.redes-sociais button.github:hover {
+    background: linear-gradient(45deg, #6e5494, #1b1f23);
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #1F1F1F; /* Fundo escuro para seções */
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #2C3E50; /* Cor fria para o footer */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Certifique-se de que o footer esteja no final do conteúdo */
+}
