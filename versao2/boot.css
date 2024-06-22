@@ -1,0 +1,19 @@
+footer{
+    background-color: #ECEFF1;
+    }
+    div.rdSocia{
+    display: flex;
+    gap: 0.9vw;
+    }
+    h6.titleFooter{
+    margin-bottom: 0.5vh;
+    }
+    hr.txtFooter{
+    width: 3vw;
+    background-color: rgb(4, 53, 103);
+    height: 0.4vh;
+    }
+    div.entrada {
+        background-image: url(./img/imgDesktopBackground.jpg);
+    }
+    
