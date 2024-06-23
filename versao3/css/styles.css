@@ -1,15 +1,15 @@
-/* Início da estilização geral */
+/* Estilização geral */
 body {
     margin: 0;
     padding: 0;
-    color: #EDEDED; /* Texto branco suave */
-    background-color: #282828; /* Fundo cinza escuro para seções */
+    color: #EDEDED;
+    background-color: #282828;
+    scroll-behavior: smooth;
 }
-/* Fim da estilização geral */
 
-/* Início da estilização do nav */
+/* Estilização da navbar */
 nav.navbar {
-    background-color: #4B0082; /* Fundo roxo índigo */
+    background-color: #4B0082;
     color: white;
     padding: 1.5vw;
     display: flex;
@@ -43,21 +43,21 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
     color: #6A9FB5;
 }
-/* Fim da estilização do nav */
 
-/* Início da estilização da tela inicial */
+/* Estilização da tela inicial */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    margin-top: 60px; /* Espaço para a navbar fixa */
+    margin-top: 60px;
 }
 
 .intro {
@@ -78,7 +78,7 @@ header {
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 1; /* Certifica-se de que a imagem está acima do contorno */
+    z-index: 1;
 }
 
 .profile-img-container::before {
@@ -92,7 +92,7 @@ header {
     border-radius: 50%;
     background-image: linear-gradient(45deg, #4B0082, #EDEDED);
     animation: rotate-border 5s linear infinite;
-    z-index: 0; /* Certifica-se de que o contorno está abaixo da imagem */
+    z-index: 0;
 }
 
 .descricao {
@@ -131,13 +131,12 @@ i {
 .redes-sociais button.github:hover {
     background: linear-gradient(45deg, #6e5494, #1b1f23);
 }
-/* Fim da estilização da tela inicial */
 
-/* Início da estilização da tela projetos */
+/* Estilização da tela projetos */
 section {
     padding: 2rem;
     text-align: center;
-    background-color: #282828; /* Fundo cinza escuro para seções */
+    background-color: #282828;
     margin-bottom: 1rem;
 }
 
@@ -149,7 +148,7 @@ section {
 }
 
 .card {
-    background-color: #333333; /* Fundo cinza escuro para cartões */
+    background-color: #333333;
     border-radius: 5px;
     padding: 1rem;
     width: 30%;
@@ -157,42 +156,85 @@ section {
 }
 
 .card h3 {
-    color: #EDEDED; /* Texto branco suave */
+    color: #EDEDED;
 }
 
 .card p {
-    color: #C0C0C0; /* Texto cinza suave */
+    color: #C0C0C0;
 }
 
 .card a {
     text-decoration: none;
-    color: #6A9FB5; /* Azul claro */
+    color: #6A9FB5;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card a:hover {
+    color: #9ACFE8;
+    transform: scale(1.05);
 }
 
 .card h4 {
-    color: #AAAAAA; /* Cor mais clara para h4 */
+    color: #AAAAAA;
 }
 
 .tech-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
     padding: 0;
     list-style: none;
 }
 
 .tech-icons li {
-    font-size: 1.4rem; /* Reduzido em 30% */
+    width: calc(20% - 1rem); /* 5 items por linha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
 }
 
 .tech-icon {
-    width: 40px; /* Ajuste conforme necessário */
+    width: 34px;
     height: auto;
+    transition: transform 0.3s ease;
 }
-/* Fim da estilização da tela projetos */
 
+.tech-icon:hover {
+    transform: scale(1.15);
+}
 
+.tech-icon:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    top: -25px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+.more-tech {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+.show-more {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: #6A9FB5;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Estilização do footer */
 .footer-top {
     display: flex;
     justify-content: space-between;
@@ -205,7 +247,6 @@ section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
     color: #f1f1f1;
     padding: 1rem 0;
 }
@@ -232,9 +273,8 @@ div.footer-social a i {
     color: #f1f1f1;
     font-size: 4vh;
 }
-/* Fim da estilização do footer */
 
-/* Início das animações */
+/* Animações */
 @keyframes rotate-border {
     0% {
         transform: rotate(0deg);
@@ -243,9 +283,17 @@ div.footer-social a i {
         transform: rotate(360deg);
     }
 }
-/* Fim das animações */
 
-/* Início da seta de navegação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Seta de navegação */
 .scroll-arrow {
     position: fixed;
     bottom: 20px;
@@ -258,9 +306,81 @@ div.footer-social a i {
     cursor: pointer;
     display: none;
     z-index: 1000;
+    transition: opacity 0.3s;
 }
 
 .scroll-arrow.show {
     display: block;
 }
-/* Fim da seta de navegação */
+/* Estilos gerais existentes aqui */
+
+/* Consultas de mídia para telas menores */
+@media (max-width: 480px) {
+    /* Ajustar navbar */
+    nav.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ajustar a seção inicial */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .profile-img-container {
+        width: 40vw;
+        height: 40vw;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .descricao {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustar botões das redes sociais */
+    .redes-sociais button {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    /* Ajustar cards e seções */
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Ajustar footer */
+    .footer-top,
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 1rem 0;
+    }
+
+    .footer-social a i {
+        font-size: 3vh;
+    }
+
+    /* Ajustar seta de navegação */
+    .scroll-arrow {
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+}

@@ -1,20 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Animação de digitação
     const textElement = document.getElementById('typing');
     const text = "Olá, Mundo!";
     let index = 0;
+    let typing = true;
 
     function type() {
-        if (index < text.length) {
-            textElement.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, 150);
+        if (typing) {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            } else {
+                typing = false;
+                setTimeout(type, 2000);
+            }
+        } else {
+            if (index > 0) {
+                textElement.innerHTML = text.substring(0, index - 1);
+                index--;
+                setTimeout(type, 150);
+            } else {
+                typing = true;
+                setTimeout(type, 500);
+            }
         }
     }
 
     type();
 
-    // Seta de navegação
     const scrollArrow = document.getElementById('scroll-arrow');
 
     function toggleScrollArrow() {
@@ -34,5 +47,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener('scroll', toggleScrollArrow);
-    toggleScrollArrow(); // Initialize on page load
+    toggleScrollArrow();
+
+    document.querySelectorAll('.show-more').forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            const moreTech = this.previousElementSibling;
+            if (moreTech.style.display === 'none' || moreTech.style.display === '') {
+                moreTech.style.display = 'flex';
+                this.innerHTML = 'Mostrar menos';
+            } else {
+                moreTech.style.display = 'none';
+                this.innerHTML = 'Mostrar mais';
+            }
+        });
+    });
 });
