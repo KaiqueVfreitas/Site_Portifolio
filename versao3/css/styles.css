@@ -19,20 +19,27 @@ nav.navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo e nome */
 nav h3 {
     display: flex;
     align-items: center;
+    margin: 0;
+    font-size: 70%; /* Reduzir tamanho em 30% */
 }
 
 nav h3 img {
-    width: 7vh;
-    margin-right: 10px;
+    width: 5vh; /* Reduzir tamanho em 30% */
+    margin-right: 5px;
 }
 
-nav p {
-    margin: 0;
+/* Menu hamburguer */
+nav .menu-toggle {
+    display: none;
+    font-size: 1.5rem; /* Reduzir tamanho em 30% */
+    cursor: pointer;
 }
 
+/* Links de navegação */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -241,6 +248,8 @@ section {
     background-color: #4B0082;
     color: #f1f1f1;
     padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
 }
 
 .footer-main {
@@ -271,7 +280,7 @@ section {
 div.footer-social a i {
     text-decoration: none;
     color: #f1f1f1;
-    font-size: 4vh;
+    font-size: 2vh; /* Reduzido pela metade */
 }
 
 /* Animações */
@@ -312,10 +321,9 @@ div.footer-social a i {
 .scroll-arrow.show {
     display: block;
 }
-/* Estilos gerais existentes aqui */
 
 /* Consultas de mídia para telas menores */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
     /* Ajustar navbar */
     nav.navbar {
         flex-direction: column;
@@ -337,19 +345,31 @@ div.footer-social a i {
     .profile-img-container {
         width: 40vw;
         height: 40vw;
-        margin-right: 0;
-        margin-bottom: 1rem;
+        margin: 0 auto 1rem auto;
     }
 
     .descricao {
         max-width: 100%;
         text-align: center;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
     }
 
-    /* Ajustar botões das redes sociais */
+    /* Estilizar botões das redes sociais com cores fixas */
     .redes-sociais button {
         margin-bottom: 0.5rem;
         width: 100%;
+    }
+    .redes-sociais button.linkedin {
+        background: linear-gradient(45deg, #004182, #0077b5);
+    }
+    .redes-sociais button.whatsapp {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+    }
+    .redes-sociais button.instagram {
+        background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    }
+    .redes-sociais button.github {
+        background: linear-gradient(45deg, #6e5494, #1b1f23);
     }
 
     /* Ajustar cards e seções */
@@ -360,6 +380,26 @@ div.footer-social a i {
     .card {
         width: 90%;
         margin: 0 auto;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
+    }
+
+    /* Ajustar tecnologias */
+    .tech-icons {
+        flex-wrap: wrap; /* Para permitir quebrar linha */
+        justify-content: center; /* Centralizar as tecnologias */
+    }
+
+    .tech-icons li {
+        width: calc(33.33% - 1rem); /* 3 items por linha */
+    }
+
+    .show-more {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        color: #6A9FB5;
+        font-weight: bold;
+        margin-top: 1rem;
     }
 
     /* Ajustar footer */
@@ -367,6 +407,7 @@ div.footer-social a i {
     .footer-main {
         flex-direction: column;
         align-items: center;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
     }
 
     .footer-column {
@@ -382,5 +423,127 @@ div.footer-social a i {
         right: 10px;
         bottom: 10px;
         padding: 5px;
+    }
+}
+
+/* Consultas de mídia para telas menores até 650px */
+@media (max-width: 650px) {
+    /* Ajustar a seção inicial */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .profile-img-container {
+        margin: 0 auto 1rem auto;
+    }
+
+    .descricao {
+        font-size: 75%;
+        text-align: center;
+    }
+
+    /* Ajustar botões das redes sociais com cores fixas */
+    .redes-sociais button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .redes-sociais button.linkedin {
+        background: linear-gradient(45deg, #004182, #0077b5);
+    }
+    .redes-sociais button.whatsapp {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+    }
+    .redes-sociais button.instagram {
+        background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    }
+    .redes-sociais button.github {
+        background: linear-gradient(45deg, #6e5494, #1b1f23);
+    }
+
+    /* Ajustar cards e seções */
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 75%;
+    }
+
+    /* Ajustar tecnologias */
+    .tech-icons {
+        flex-wrap: wrap; /* Para permitir quebrar linha */
+        justify-content: center; /* Centralizar as tecnologias */
+    }
+
+    .tech-icons li {
+        width: calc(33.33% - 1rem); /* 3 items por linha */
+    }
+
+    .show-more {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        color: #6A9FB5;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .more-tech ul.tech-icons li {
+        width: calc(33.33% - 1rem); /* Garantir que mostre 3 por linha */
+    }
+
+    /* Exibir todos os cards na versão mobile */
+    #formacoes .card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajustar footer */
+    .footer-top,
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        font-size: 75%;
+    }
+
+    .footer-column {
+        margin: 1rem 0;
+    }
+
+    .footer-social a i {
+        font-size: 2vh; /* Reduzido pela metade */
+    }
+
+    /* Ajustar seta de navegação */
+    .scroll-arrow {
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+
+    /* Exibir ícone do menu hamburguer */
+    nav .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar itens do menu por padrão no mobile */
+    nav ul {
+        display: none;
+    }
+
+    /* Exibir itens do menu quando o menu hamburguer está ativo */
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
     }
 }
