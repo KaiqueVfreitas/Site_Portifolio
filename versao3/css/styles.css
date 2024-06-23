@@ -1,26 +1,43 @@
+/* Início da estilização geral */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #121212; /* Fundo escuro */
-    color: #E0E0E0; /* Texto claro */
+    color: #EDEDED; /* Texto branco suave */
+    background-color: #282828; /* Fundo cinza escuro para seções */
 }
+/* Fim da estilização geral */
 
-nav {
-    background-color: #2C3E50; /* Cor fria para a navbar */
+/* Início da estilização do nav */
+nav.navbar {
+    background-color: #4B0082; /* Fundo roxo índigo */
     color: white;
     padding: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h3 {
+    display: flex;
+    align-items: center;
+}
+
+nav h3 img {
+    width: 7vh;
+    margin-right: 10px;
+}
+
+nav p {
+    margin: 0;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
-}
-
-nav ul li {
-    margin: 0 10vw;
+    gap: 2rem;
+    margin: 0;
 }
 
 nav ul li a {
@@ -28,22 +45,54 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #6A9FB5;
+}
+/* Fim da estilização do nav */
+
+/* Início da estilização da tela inicial */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    margin-top: 60px; /* Espaço para a navbar fixa */
 }
 
 .intro {
     display: flex;
     align-items: center;
+    text-align: center;
+}
+
+.profile-img-container {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    margin-right: 6vw;
 }
 
 .perfil-img {
     border-radius: 50%;
-    width: 20vw;
-    margin-right: 6vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Certifica-se de que a imagem está acima do contorno */
+}
+
+.profile-img-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #4B0082, #EDEDED);
+    animation: rotate-border 5s linear infinite;
+    z-index: 0; /* Certifica-se de que o contorno está abaixo da imagem */
 }
 
 .descricao {
@@ -53,22 +102,18 @@ header {
 .redes-sociais {
     margin-top: 1vh;
 }
-i{
+
+i {
     margin-right: 1vw;
 }
+
 .redes-sociais button {
-    background-color: #333333; /* Cor mais escura para os botões */
-    color: white;
     border: none;
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.5s ease;
-}
-
-.redes-sociais button:hover {
-    color: white;
 }
 
 .redes-sociais button.linkedin:hover {
@@ -86,18 +131,136 @@ i{
 .redes-sociais button.github:hover {
     background: linear-gradient(45deg, #6e5494, #1b1f23);
 }
+/* Fim da estilização da tela inicial */
 
+/* Início da estilização da tela projetos */
 section {
     padding: 2rem;
     text-align: center;
-    background-color: #1F1F1F; /* Fundo escuro para seções */
+    background-color: #282828; /* Fundo cinza escuro para seções */
     margin-bottom: 1rem;
 }
 
-footer {
-    background-color: #2C3E50; /* Cor fria para o footer */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Certifique-se de que o footer esteja no final do conteúdo */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
+
+.card {
+    background-color: #333333; /* Fundo cinza escuro para cartões */
+    border-radius: 5px;
+    padding: 1rem;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    color: #EDEDED; /* Texto branco suave */
+}
+
+.card p {
+    color: #C0C0C0; /* Texto cinza suave */
+}
+
+.card a {
+    text-decoration: none;
+    color: #6A9FB5; /* Azul claro */
+}
+
+.card h4 {
+    color: #AAAAAA; /* Cor mais clara para h4 */
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-icons li {
+    font-size: 1.4rem; /* Reduzido em 30% */
+}
+
+.tech-icon {
+    width: 40px; /* Ajuste conforme necessário */
+    height: auto;
+}
+/* Fim da estilização da tela projetos */
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4B0082;
+    color: #f1f1f1;
+    padding: 1rem 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    color: #f1f1f1;
+    padding: 1rem 0;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 1rem;
+    min-width: 250px;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-hr {
+    width: 60px;
+    border: 1px solid #6A9FB5;
+    margin: 0.5rem auto;
+}
+
+div.footer-social a i {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 4vh;
+}
+/* Fim da estilização do footer */
+
+/* Início das animações */
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Fim das animações */
+
+/* Início da seta de navegação */
+.scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-arrow.show {
+    display: block;
+}
+/* Fim da seta de navegação */
