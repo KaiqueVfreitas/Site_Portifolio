@@ -1,0 +1,591 @@
+/* Estilização geral */
+body {
+    margin: 0;
+    padding: 0;
+    color: #EDEDED;
+    background-color: #282828;
+    scroll-behavior: smooth;
+}
+
+/* Estilização da navbar */
+nav.barra-de-navegacao {
+    background-color: #4B0082;
+    color: white;
+    padding: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h3 {
+    display: flex;
+    align-items: center;
+}
+
+nav h3 img {
+    width: 7vh;
+    margin-right: 10px;
+}
+
+nav p {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #6A9FB5;
+}
+
+/* Estilização da tela inicial */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 60px;
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.container-imagem-de-perfil {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    margin-right: 6vw;
+}
+
+.imagem-de-perfil {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.container-imagem-de-perfil::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #4B0082, #EDEDED);
+    animation: rotate-border 5s linear infinite;
+    z-index: 0;
+}
+
+.descricao {
+    max-width: 60vw;
+}
+
+.redes-sociais {
+    margin-top: 1vh;
+}
+
+i {
+    margin-right: 1vw;
+}
+
+.redes-sociais button {
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.5s ease;
+}
+
+.redes-sociais button.linkedin:hover {
+    background: linear-gradient(45deg, #004182, #0077b5);
+}
+
+.redes-sociais button.whatsapp:hover {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+}
+
+.redes-sociais button.instagram:hover {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.redes-sociais button.github:hover {
+    background: linear-gradient(45deg, #6e5494, #1b1f23);
+}
+
+/* Estilização da tela projetos */
+section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #282828;
+    margin-bottom: 1rem;
+}
+
+.container-de-cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cartao {
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.cartao h3 {
+    color: #EDEDED;
+}
+
+.cartao p {
+    color: #C0C0C0;
+}
+
+.cartao a {
+    text-decoration: none;
+    color: #6A9FB5;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.cartao a:hover {
+    color: #9ACFE8;
+    transform: scale(1.05);
+}
+
+.cartao h4 {
+    color: #AAAAAA;
+}
+
+.icones-de-tecnologia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.icones-de-tecnologia li {
+    width: calc(20% - 1rem); /* 5 items por linha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.icone-de-tecnologia {
+    width: 34px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.icone-de-tecnologia:hover {
+    transform: scale(1.15);
+}
+
+.icone-de-tecnologia:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    top: -25px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+.mais-tecnologias {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+.mostrar-mais {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    color: #6A9FB5;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Estilização do footer */
+.topo-do-rodape {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4B0082;
+    color: #f1f1f1;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.principal-do-rodape {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #f1f1f1;
+    padding: 1rem 0;
+}
+
+.coluna-do-rodape {
+    flex: 1;
+    margin: 1rem;
+    min-width: 250px;
+}
+
+.titulo-do-rodape {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.linha-do-rodape {
+    width: 60px;
+    border: 1px solid #6A9FB5;
+    margin: 0.5rem auto;
+}
+
+div.redes-sociais-do-rodape a i {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 4vh;
+}
+
+/* Alinhamento vertical para .info-do-rodape e .redes-sociais-do-rodape */
+.info-do-rodape,
+.redes-sociais-do-rodape {
+    display: flex;
+    align-items: center;
+}
+
+/* Animações */
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Seta de navegação */
+.seta-de-rolagem {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.seta-de-rolagem.show {
+    display: block;
+}
+
+/* Consultas de mídia para telas menores */
+@media (max-width: 900px) {
+    /* Ajustar navbar */
+    nav.barra-de-navegacao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Ajustar a seção inicial */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .container-imagem-de-perfil {
+        width: 40vw;
+        height: 40vw;
+        margin: 0 auto 1rem auto;
+    }
+
+    .descricao {
+        max-width: 100%;
+        text-align: center;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
+    }
+
+    /* Estilizar botões das redes sociais com cores fixas */
+    .redes-sociais button {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    .redes-sociais button.linkedin {
+        background: linear-gradient(45deg, #004182, #0077b5);
+    }
+    .redes-sociais button.whatsapp {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+    }
+    .redes-sociais button.instagram {
+        background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    }
+    .redes-sociais button.github {
+        background: linear-gradient(45deg, #6e5494, #1b1f23);
+    }
+
+    /* Ajustar cards e seções */
+    .container-de-cartoes {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
+    }
+
+    /* Ajustar tecnologias */
+    .icones-de-tecnologia {
+        flex-wrap: wrap; /* Para permitir quebrar linha */
+        justify-content: center; /* Centralizar as tecnologias */
+    }
+
+    .icones-de-tecnologia li {
+        width: calc(33.33% - 1rem); /* 3 items por linha */
+    }
+
+    .mostrar-mais {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        color: #6A9FB5;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    /* Ajustar footer */
+    .topo-do-rodape,
+    .principal-do-rodape {
+        flex-direction: column;
+        align-items: center;
+        font-size: 75%; /* Diminuir o tamanho das fontes */
+    }
+
+    .coluna-do-rodape {
+        margin: 1rem 0;
+    }
+
+    .redes-sociais-do-rodape a i {
+        font-size: 3vh;
+    }
+
+    /* Ajustar seta de navegação */
+    .seta-de-rolagem {
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+}
+
+/* Consultas de mídia para telas menores até 650px */
+@media (max-width: 650px) {
+    /* Ajustar a seção inicial */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .introducao {
+        flex-direction: column;
+    }
+
+    .container-imagem-de-perfil {
+        margin: 0 auto 1rem auto;
+    }
+
+    .descricao {
+        font-size: 75%;
+        text-align: center;
+    }
+
+    /* Ajustar botões das redes sociais com cores fixas */
+    .redes-sociais button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .redes-sociais button.linkedin {
+        background: linear-gradient(45deg, #004182, #0077b5);
+    }
+    .redes-sociais button.whatsapp {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+    }
+    .redes-sociais button.instagram {
+        background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    }
+    .redes-sociais button.github {
+        background: linear-gradient(45deg, #6e5494, #1b1f23);
+    }
+
+    /* Ajustar cards e seções */
+    .container-de-cartoes {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 75%;
+    }
+
+    /* Ajustar tecnologias */
+    .icones-de-tecnologia {
+        flex-wrap: wrap; /* Para permitir quebrar linha */
+        justify-content: center; /* Centralizar as tecnologias */
+    }
+
+    .icones-de-tecnologia li {
+        width: calc(33.33% - 1rem); /* 3 items por linha */
+    }
+
+    .mostrar-mais {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        color: #6A9FB5;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .mais-tecnologias ul.icones-de-tecnologia li {
+        width: calc(33.33% - 1rem); /* Garantir que mostre 3 por linha */
+    }
+
+    /* Exibir todos os cards na versão mobile */
+    #formacoes .container-de-cartoes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajustar footer */
+    .topo-do-rodape,
+    .principal-do-rodape {
+        flex-direction: column;
+        align-items: center;
+        font-size: 75%;
+    }
+
+    .coluna-do-rodape {
+        margin: 1rem 0;
+    }
+
+    .redes-sociais-do-rodape a i {
+        font-size: 2vh; /* Reduzido pela metade */
+    }
+
+    /* Ajustar seta de navegação */
+    .seta-de-rolagem {
+        right: 10px;
+        bottom: 10px;
+        padding: 5px;
+    }
+
+    /* Exibir ícone do menu hamburguer */
+    nav .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar itens do menu por padrão no mobile */
+    nav ul {
+        display: none;
+    }
+
+    /* Exibir itens do menu quando o menu hamburguer está ativo */
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    /* Estilização da navbar */
+nav h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centralizar nome e logo */
+    margin: 0;
+    font-size: 1.15rem; /* Ajustar fonte do nome */
+}
+
+nav h3 img {
+    width: 3.5vh; /* Reduzir tamanho em 30% */
+    margin-right: 5px;
+}
+
+nav .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: center; /* Alinhar com logo e nome */
+}
+
+/* Footer */
+.titulo-do-rodape {
+    font-size: 0.6rem; /* Reduzir em 40% */
+}
+
+.principal-do-rodape p {
+    font-size: 0.9rem; /* Reduzir em 10% */
+}
+
+.topo-do-rodape p {
+    font-size: 0.9rem; /* Reduzir em 10% */
+}
+
+.coluna-do-rodape h6 {
+    font-size: 1.15rem; /* Aumentar em 15% */
+}
+
+/* Links */
+a:visited {
+    color: blue;
+}
+
+}
