@@ -7,8 +7,15 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Reset de margin e padding para garantir que nav e footer ocupem toda a largura */
+nav, footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /* Estilização da navbar */
-nav.barra-de-navegacao {
+.navBar {
     background-color: #4B0082;
     color: white;
     padding: 1.5vw;
@@ -19,36 +26,74 @@ nav.barra-de-navegacao {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav h3 {
+.navBar h3 {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.15rem;
 }
 
-nav h3 img {
+.navBar h3 img {
     width: 7vh;
     margin-right: 10px;
 }
 
-nav p {
+.navBar p {
     margin: 0;
 }
 
-nav ul {
+.navBar ul {
     list-style-type: none;
     display: flex;
     gap: 2rem;
     margin: 0;
 }
 
-nav ul li a {
+.navBar ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
+.navBar ul li a:hover {
     text-decoration: underline;
     color: #6A9FB5;
+}
+
+/* Estilização do menu hamburguer */
+.menuToggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+    .navBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navBar ul {
+        display: none;
+    }
+    
+    .navBar ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #4B0082;
+        z-index: 1000;
+    }
+
+    .menuToggle {
+        display: block;
+    }
 }
 
 /* Estilização da tela inicial */
@@ -235,6 +280,10 @@ section {
 }
 
 /* Estilização do footer */
+footer {
+    width: 100%;
+}
+
 .topo-do-rodape {
     display: flex;
     justify-content: space-between;
@@ -282,46 +331,7 @@ div.redes-sociais-do-rodape a i {
     align-items: center;
 }
 
-/* Animações */
-@keyframes rotate-border {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Seta de navegação */
-.seta-de-rolagem {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4B0082;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
-    transition: opacity 0.3s;
-}
-
-.seta-de-rolagem.show {
-    display: block;
-}
-
-/* Consultas de mídia para telas menores */
+/* Estilos adicionais para mobile */
 @media (max-width: 900px) {
     /* Ajustar navbar */
     nav.barra-de-navegacao {
@@ -433,7 +443,7 @@ div.redes-sociais-do-rodape a i {
         height: auto;
         padding: 1rem;
     }
-
+    
     .introducao {
         flex-direction: column;
     }
@@ -545,47 +555,115 @@ div.redes-sociais-do-rodape a i {
         gap: 1rem;
         width: 100%;
     }
+
     /* Estilização da navbar */
-nav h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centralizar nome e logo */
-    margin: 0;
-    font-size: 1.15rem; /* Ajustar fonte do nome */
+    nav h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-size: 1.15rem;
+    }
+
+    nav h3 img {
+        width: 3.5vh;
+        margin-right: 5px;
+    }
+
+    nav .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    /* Footer */
+    .titulo-do-rodape {
+        font-size: 0.6rem;
+    }
+
+    .principal-do-rodape p {
+        font-size: 0.9rem;
+    }
+
+    .topo-do-rodape p {
+        font-size: 0.9rem;
+    }
+
+    .coluna-do-rodape h6 {
+        font-size: 1.15rem;
+    }
 }
 
-nav h3 img {
-    width: 3.5vh; /* Reduzir tamanho em 30% */
-    margin-right: 5px;
+/* Estilos para desktop */
+@media (min-width: 901px) {
+    .navBar {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .topo-do-rodape {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-do-rodape {
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    .redes-sociais-do-rodape {
+        justify-content: flex-end;
+        width: 50%;
+    }
+
+    .info-do-rodape,
+    .redes-sociais-do-rodape {
+        display: flex;
+        align-items: center;
+    }
 }
 
-nav .menu-toggle {
-    display: block;
-    font-size: 1.5rem;
+/* Animações */
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Seta de navegação */
+.seta-de-rolagem {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    align-self: center; /* Alinhar com logo e nome */
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s;
 }
 
-/* Footer */
-.titulo-do-rodape {
-    font-size: 0.6rem; /* Reduzir em 40% */
-}
-
-.principal-do-rodape p {
-    font-size: 0.9rem; /* Reduzir em 10% */
-}
-
-.topo-do-rodape p {
-    font-size: 0.9rem; /* Reduzir em 10% */
-}
-
-.coluna-do-rodape h6 {
-    font-size: 1.15rem; /* Aumentar em 15% */
-}
-
-/* Links */
-a:visited {
-    color: blue;
-}
-
+.seta-de-rolagem.show {
+    display: block;
 }

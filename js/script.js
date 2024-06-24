@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Menu toggle logic
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector('.menuToggle');
     const navUl = document.querySelector('nav ul');
 
     menuToggle.addEventListener('click', () => {
