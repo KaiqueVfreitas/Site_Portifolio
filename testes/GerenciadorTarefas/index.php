@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Gerenciador de Tarefas</title>
 </head>
 <body class="temaClaro">
@@ -37,11 +37,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form action="" method="post">
                 <label for="campoNomeTarefa">Nome da Tarefa</label>
                 <input type="text" id="campoNomeTarefa" name="nomeTarefa" placeholder="Nome da Tarefa">
-                <button type="submit" class="botaoAdicionar">Adicionar</button>
+                <button type="submit" class="botaoAdicionar">Adicionar Tarefas</button>
             </form>
             <form action="" method="post">
                 <input type="hidden" name="limpar" value="1">
-                <button type="submit" class="botaoLimpar">Apagar Tarefas</button>
+                <button type="submit" class="botaoLimpar">Apagar Todas as Tarefas</button>
             </form>
         </div>
         <div class="listaTarefas">
