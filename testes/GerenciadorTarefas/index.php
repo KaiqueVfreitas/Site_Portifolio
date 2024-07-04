@@ -20,7 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             break;
         case 'limpar':
-            // Esta ação será implementada no futuro
+            if (limparTodasTarefas()) {
+                $_SESSION['mensagem'] = "Todas as tarefas foram apagadas!";
+            } else {
+                $_SESSION['mensagem'] = "Erro ao apagar as tarefas!";
+            }
             break;
     }
 }
