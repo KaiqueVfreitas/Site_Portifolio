@@ -1,22 +1,30 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['listaTarefas'])) {
-    $_SESSION['listaTarefas'] = array();
-}
+require_once 'database/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['nomeTarefa'])) {
-        $tarefa = htmlspecialchars($_POST['nomeTarefa']);
-        array_push($_SESSION['listaTarefas'], $tarefa);
+    if (isset($_POST['nomeTarefa']) && !empty($_POST['nomeTarefa'])) {
+        $nomeTarefa = htmlspecialchars($_POST['nomeTarefa']);
+        $dataTarefa = isset($_POST['dataTarefa']) ? htmlspecialchars($_POST['dataTarefa']) : null;
+        $acao = 'cadastrar';
+    } elseif (isset($_POST['limpar']) && $_POST['limpar'] == 1) {
+        $acao = 'limpar';
     }
 
-    if (isset($_POST['limpar'])) {
-        unset($_SESSION['listaTarefas']);
+    switch ($acao) {
+        case 'cadastrar':
+            if (cadastrarTarefa($nomeTarefa, $dataTarefa)) {
+                $_SESSION['mensagem'] = "Tarefa cadastrada com sucesso!";
+            } else {
+                $_SESSION['mensagem'] = "Erro ao cadastrar tarefa!";
+            }
+            break;
+        case 'limpar':
+            // Esta ação será implementada no futuro
+            break;
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,9 +42,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
     <main>
         <div class="formulario">
+            <?php
+            if (isset($_SESSION['mensagem'])) {
+                echo "<p>" . $_SESSION['mensagem'] . "</p>";
+                unset($_SESSION['mensagem']);
+            }
+            ?>
             <form action="" method="post">
                 <label for="campoNomeTarefa">Nome da Tarefa</label>
                 <input type="text" id="campoNomeTarefa" name="nomeTarefa" placeholder="Nome da Tarefa">
+                <label for="campoDataTarefa">Data da Tarefa</label>
+                <input type="datetime-local" id="campoDataTarefa" name="dataTarefa">
                 <button type="submit" class="botaoAdicionar">Adicionar Tarefas</button>
             </form>
             <form action="" method="post">
