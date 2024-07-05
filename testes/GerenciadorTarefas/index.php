@@ -6,28 +6,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['nomeTarefa']) && !empty($_POST['nomeTarefa'])) {
         $nomeTarefa = htmlspecialchars($_POST['nomeTarefa']);
         $dataTarefa = isset($_POST['dataTarefa']) ? htmlspecialchars($_POST['dataTarefa']) : null;
-        $acao = 'cadastrar';
+        if (empty($dataTarefa)) {
+            $dataTarefa = null;
+        }
+        if (isset($_POST['id']) && !empty($_POST['id'])) {
+            $id = intval($_POST['id']);
+            $acao = 'Editar';
+        } else {
+            $acao = 'Cadastrar';
+        }
     } elseif (isset($_POST['limpar']) && $_POST['limpar'] == 1) {
-        $acao = 'limpar';
+        $acao = 'Limpar';
+    } elseif (isset($_POST['id']) && isset($_POST['apagar']) && $_POST['apagar'] == 1) {
+        $id = intval($_POST['id']);
+        $acao = 'Apagar';
     }
 
     switch ($acao) {
-        case 'cadastrar':
-            if (cadastrarTarefa($nomeTarefa, $dataTarefa)) {
-                $_SESSION['mensagem'] = "Tarefa cadastrada com sucesso!";
+        case 'Cadastrar':
+            if (CadastrarTarefa($nomeTarefa, $dataTarefa)) {
+                echo "<script>alert('Tarefa cadastrada com sucesso!');</script>";
             } else {
-                $_SESSION['mensagem'] = "Erro ao cadastrar tarefa!";
+                echo "<script>alert('Erro ao cadastrar tarefa!');</script>";
             }
             break;
-        case 'limpar':
-            if (limparTodasTarefas()) {
-                $_SESSION['mensagem'] = "Todas as tarefas foram apagadas!";
+        case 'Limpar':
+            if (LimparTodasTarefas()) {
+                echo "<script>alert('Todas as tarefas foram apagadas!');</script>";
             } else {
-                $_SESSION['mensagem'] = "Erro ao apagar as tarefas!";
+                echo "<script>alert('Erro ao apagar as tarefas!');</script>";
+            }
+            break;
+        case 'Apagar':
+            if (ApagarTarefa($id)) {
+                echo "<script>alert('Tarefa apagada com sucesso!');</script>";
+            } else {
+                echo "<script>alert('Erro ao apagar a tarefa!');</script>";
+            }
+            break;
+        case 'Editar':
+            if (EditarTarefa($id, $nomeTarefa, $dataTarefa)) {
+                echo "<script>alert('Tarefa editada com sucesso!');</script>";
+            } else {
+                echo "<script>alert('Erro ao editar a tarefa!');</script>";
             }
             break;
     }
 }
+
+$_SESSION['listaTarefas'] = ListarTarefas();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,18 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
     <main>
         <div class="formulario">
-            <?php
-            if (isset($_SESSION['mensagem'])) {
-                echo "<p>" . $_SESSION['mensagem'] . "</p>";
-                unset($_SESSION['mensagem']);
-            }
-            ?>
-            <form action="" method="post">
+            <div id="mensagem"></div>
+            <form id="formTarefa" action="" method="post">
+                <input type="hidden" id="idTarefa" name="id">
                 <label for="campoNomeTarefa">Nome da Tarefa</label>
                 <input type="text" id="campoNomeTarefa" name="nomeTarefa" placeholder="Nome da Tarefa">
                 <label for="campoDataTarefa">Data da Tarefa</label>
                 <input type="datetime-local" id="campoDataTarefa" name="dataTarefa">
-                <button type="submit" class="botaoAdicionar">Adicionar Tarefas</button>
+                <button type="submit" class="botaoAdicionar">Adicionar Tarefa</button>
             </form>
             <form action="" method="post">
                 <input type="hidden" name="limpar" value="1">
@@ -65,33 +88,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
         </div>
         <div class="listaTarefas">
-            <ul>
-                <?php
-                if (isset($_SESSION['listaTarefas'])) {
-                    foreach ($_SESSION['listaTarefas'] as $tarefa) {
-                        echo "<li>" . htmlspecialchars($tarefa) . "</li>";
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome da Tarefa</th>
+                        <th>Data da Tarefa</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if (isset($_SESSION['listaTarefas'])) {
+                        foreach ($_SESSION['listaTarefas'] as $tarefa) {
+                            $dataTarefaFormatada = $tarefa['dataTarefa'] ? date('d/m/Y H:i', strtotime($tarefa['dataTarefa'])) : 'Não informado';
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($tarefa['id']) . "</td>";
+                            echo "<td class='nomeTarefa'>" . htmlspecialchars($tarefa['nomeTarefa']) . "</td>";
+                            echo "<td>" . htmlspecialchars($dataTarefaFormatada) . "</td>";
+                            echo "<td class='acoes'>
+                                    <form action='' method='post' style='display:inline-block'>
+                                        <input type='hidden' name='id' value='" . htmlspecialchars($tarefa['id']) . "'>
+                                        <input type='hidden' name='apagar' value='1'>
+                                        <button type='submit' class='botaoApagar'>Apagar</button>
+                                    </form>
+                                    <button class='botaoEditar' data-id='" . htmlspecialchars($tarefa['id']) . "' data-nome='" . htmlspecialchars($tarefa['nomeTarefa']) . "' data-data='" . htmlspecialchars($tarefa['dataTarefa']) . "'>Editar</button>
+                                  </td>";
+                            echo "</tr>";
+                        }
                     }
-                }
-                ?>
-            </ul>
+                    ?>
+                </tbody>
+            </table>
         </div>
     </main>
     <footer>
         <a href="https://kaiquevfreitas.github.io/Portifolio/">Desenvolvido por Kaique Vieira de Freitas</a>
     </footer>
 
-    <script>
-        document.getElementById('botaoTrocarTema').addEventListener('click', function() {
-            document.body.classList.toggle('temaClaro');
-            document.body.classList.toggle('temaEscuro');
-            
-            const iconeTema = document.querySelector('.iconeTema');
-            if (document.body.classList.contains('temaEscuro')) {
-                iconeTema.src = 'img/solApagado.png';
-            } else {
-                iconeTema.src = 'img/sol.png';
-            }
-        });
-    </script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
