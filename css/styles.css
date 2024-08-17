@@ -222,7 +222,17 @@ section {
 .cartao h4 {
     color: #AAAAAA;
 }
-
+.cartao ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.cartao li{
+    list-style: none;
+}
+.cartao img{
+    width: 1.5em;
+}
 .icones-de-tecnologia {
     display: flex;
     flex-wrap: wrap;
