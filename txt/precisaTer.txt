@@ -1,8 +1,0 @@
-Coque de privacidade 
-Seta para voltar ao topo
-Não usar wordpress e nem bootstrap
-Linkedin, Whatsaap, Instagram e GitHub logo de inicio na pagina
-_blank para adicionar links de fora
-usar hover
-Site usando cores claras
-
