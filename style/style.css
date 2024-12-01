@@ -1,14 +1,15 @@
-/* Estilo global */
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #facc15; /* Letras amarelas */
+    color: #facc15;
     scroll-behavior: smooth;
     margin: 0;
 }
 #leituras, #formacoes, #sobreMim, #habilidadesProjetos, #contatos, #kaique{
     background-color: #1e293b;
-    height: 15vh;
+    height: 5vh;
+}
+#contatos{
+    border-top: 2px solid #facc15;
 }
 /* Estilo do Header */
 header {
@@ -36,7 +37,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #f3f3f3; /* Destaque ao passar o mouse */
+    color: #f3f3f3;
 }
 
 header .navbar-toggler {
@@ -46,8 +47,8 @@ header .navbar-toggler {
 
 /* Seções */
 section {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    background-color: #1e293b; /* Fundo igual ao site */
+  
+    background-color: #1e293b;
 }
 
 h1, h2, h3, h4, h5 {
@@ -55,7 +56,7 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-    color: #f3f4f6; /* Texto secundário em um tom claro */
+    color: #f3f4f6; 
 }
 
 a.btn {
@@ -68,29 +69,14 @@ a.btn {
 }
 
 a.btn:hover {
-    background-color: #1e293b;
     color: #facc15;
     border: 2px solid #facc15;
 }
 
 /* Imagem de perfil */
 #sobreMim img {
-    border: 5px solid #facc15;
+    border: 5px solid #1e293b;
 }
-
-/* Footer */
 footer {
-    color: #facc15;
     background-color: #1e293b;
-    text-align: center;
-}
-
-footer a {
-    color: #facc15;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #f3f3f3;
 }
