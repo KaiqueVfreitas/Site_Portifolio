@@ -6,7 +6,10 @@ body {
     scroll-behavior: smooth;
     margin: 0;
 }
-
+#leituras, #formacoes, #sobreMim, #habilidadesProjetos, #contatos, #kaique{
+    background-color: #1e293b;
+    height: 15vh;
+}
 /* Estilo do Header */
 header {
     position: fixed;
@@ -46,7 +49,7 @@ section {
 }
 
 h1, h2, h3, h4, h5 {
-    color: #facc15; /* Destaque para títulos */
+    color: #facc15;
 }
 
 p {
