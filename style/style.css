@@ -22,7 +22,9 @@ header {
     padding: 15px 0;
     border-bottom: 2px solid #facc15;
 }
-
+div.col{
+    margin-top: 4em;
+}
 header h4 {
     font-weight: bold;
 }
