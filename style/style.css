@@ -92,9 +92,30 @@ footer a i{
 p{
     font-size: 1.2em;
 }
+section.sobre img{
+    width: 35%;
+}
 /* Ajustes do carrosel feito em bootstrap */
 @media (max-width: 950px) {
     .carousel-item img {
         margin: auto;
     }
+    section.sobre img{
+        width: 45%;
+    }
+    /* Estilo das setas do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    width: 4rem;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
 }
