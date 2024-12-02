@@ -80,3 +80,13 @@ a.btn:hover {
 footer {
     background-color: #1e293b;
 }
+footer a i{
+    padding: 0.3em;
+}
+
+/* Ajustes do carrosel feito em bootstrap */
+@media (max-width: 950px) {
+    .carousel-item img {
+        margin: auto;
+    }
+}
