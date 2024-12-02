@@ -55,17 +55,17 @@
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-sm-6 col-lg-4">
-                    <i class="fas fa-robot fa-4x mb-3 text-light"></i>
+                    <i class="fas fa-robot fa-6x mb-3 text-light"></i>
                     <h3 class="text-light">Treinamento de IA</h3>
                     <p class="fs-5">Uso de ferramentas como LM Studio, Azure e ChatGPT.</p>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <i class="fas fa-cogs fa-4x mb-3 text-light"></i>
+                    <i class="fas fa-cogs fa-6x mb-3 text-light"></i>
                     <h3 class="text-light">Automação</h3>
                     <p class="fs-5"> Através de Python, JavaScript e Growbot.</p>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <i class="fas fa-chart-bar fa-4x mb-3 text-light"></i>
+                    <i class="fas fa-chart-bar fa-6x mb-3 text-light"></i>
                     <h3 class="text-light">Dashboards</h3>
                     <p class="fs-5">Painéis dinâmicos com Power BI, Tableau e Google Analytics 360, integrados a bancos de dados SQL e NoSQL.</p>
                 </div>
@@ -85,147 +85,165 @@
     <section class="py-5 text-center">
         <div class="container">
             <h3 class="text-light">Sobre mim</h3>
-            <p class="fs-5">Entusiasta de TI desde cedo. Transformei meu hobby em profissão. Apaixonado por dança, instrumentos musicais, literatura, astronomia e downhill.</p>
+            <p class="fs-5">Entusiasta de TI desde cedo. Transformei meu hobby em profissão, estudando desde 2018. Apaixonado por dança, instrumentos musicais, literatura, astronomia e downhill.</p>
             <img src="img/MinhaFoto.jpg" alt="Foto de Kaique Vieira" class="rounded-circle img-fluid w-50">
         </div>
     </section>
 
     <div id="formacoes"></div>
-   <!-- Formações Acadêmicas -->
-<section class="py-5">
-    <div class="container">
-        <h3 class="text-center mb-4 text-light">Formações Acadêmicas</h3>
-        <div id="formacoesCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
-            <div class="carousel-inner">
+    <!-- Formações Acadêmicas -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="text-center mb-4 text-light">Formações Acadêmicas</h3>
+
+            <!-- Carrossel para telas menores -->
+            <div id="formacoesCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Técnico -->
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <h5 class="text-light">Técnico</h5>
+                            <img src="img/logoBG.png" alt="Logo Técnico" class="img-fluid w-25">
+                            <h4 class="text-light">Desenvolvimento de Sistemas</h4>
+                            <p class="fs-5">Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com PHP e JavaScript. Foco em .NET e C#.</p>
+                            <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-lg">Saiba mais</a>
+                        </div>
+                    </div>
+                    <!-- Certificação Internacional -->
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <h5 class="text-light">Certificação Internacional</h5>
+                            <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
+                            <h4 class="text-light">Ciência de Dados</h4>
+                            <p class="fs-5">Machine Learning com Python, Azure Machine Learning e MLFlow.</p>
+                            <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-data-scientist/" target="_blank" class="btn btn-lg">Saiba mais</a>
+                        </div>
+                    </div>
+                    <!-- Outros itens -->
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <h5 class="text-light">Certificação Internacional</h5>
+                            <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
+                            <h4 class="text-light">Engenharia de IA</h4>
+                            <p class="fs-5">Com foco em monitoramento, pesquisa e consumo de IAs como as da OpenAI e Azure.</p>
+                            <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-engineer/" target="_blank" class="btn btn-lg">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles do Carrossel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+
+            <!-- Grade para telas maiores -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-none d-lg-flex">
                 <!-- Técnico -->
-                <div class="carousel-item active">
-                    <div class="text-center">
-                        <h5 class="text-light">Técnico</h5>
-                        <img src="img/logoBG.png" alt="Logo Técnico" class="img-fluid w-25">
-                        <h4 class="text-light">Desenvolvimento de Sistemas</h4>
-                        <p class="fs-5">Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com PHP e JavaScript. Foco em .NET e C#.</p>
-                        <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
+                <div class="col text-center">
+                    <h5 class="text-light">Técnico</h5>
+                    <img src="img/logoBG.png" alt="Logo Técnico" class="img-fluid w-25">
+                    <h4 class="text-light">Desenvolvimento de Sistemas</h4>
+                    <p class="fs-5">Embarcados com C++ e Arduino, Mobile em Java e Flutter, Web com PHP e JavaScript. Foco em .NET e C#.</p>
+                    <a href="https://basilides.com.br/cursos/desenvolvimento-sistemas/" target="_blank" class="btn btn-lg">Saiba mais</a>
                 </div>
-                <!-- Certificação Internacional: Ciência de Dados -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h5 class="text-light">Certificação Internacional</h5>
-                        <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
-                        <h4 class="text-light">Ciência de Dados</h4>
-                        <p class="fs-5">Machine Learning com Python, Azure Machine Learning e MLFlow.</p>
-                        <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-data-scientist/" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
+                <!-- Certificação Internacional -->
+                <div class="col text-center">
+                    <h5 class="text-light">Certificação Internacional</h5>
+                    <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
+                    <h4 class="text-light">Ciência de Dados</h4>
+                    <p class="fs-5">Machine Learning com Python, Azure Machine Learning e MLFlow.</p>
+                    <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-data-scientist/" target="_blank" class="btn btn-lg">Saiba mais</a>
                 </div>
-                <!-- Certificação Internacional: Engenharia de IA -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h5 class="text-light">Certificação Internacional</h5>
-                        <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
-                        <h4 class="text-light">Engenharia de IA</h4>
-                        <p class="fs-5">Com foco em monitoramento, pesquisa e consumo de IAs como as da OpenAI e Azure.</p>
-                        <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-engineer/" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
-                </div>
-                <!-- Curso Profissionalizante: Análise de Dados -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h5 class="text-light">Curso Profissionalizante</h5>
-                        <img src="img/logoHash.png" alt="Logo Hash" class="img-fluid w-25">
-                        <h4 class="text-light">Análise de Dados</h4>
-                        <p class="fs-5">Python, Excel com VBA e Power BI, usando diferentes fontes de dados como CSV e SQL.</p>
-                        <a href="https://www.hashtagtreinamentos.com/pg-inscricao-analise-dados-impressionador?fonte=lespera&src=lesad-site-home&curso=ad" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
-                </div>
-                <!-- Curso Profissionalizante: Programação Web -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h5 class="text-light">Curso Profissionalizante</h5>
-                        <img src="img/logoOBC.png" alt="Logo OBC" class="img-fluid w-25">
-                        <h4 class="text-light">Programação WEB</h4>
-                        <p class="fs-5">Formação com React, NodeJS, PostgreSQL, MongoDB, Typscript/Javascript e NextJS</p>
-                        <a href="https://www.onebitcode.com/" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
-                </div>
-                <!-- Curso Profissionalizante: Azure AI-900 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h5 class="text-light">Curso Profissionalizante</h5>
-                        <img src="img/logoSENAI.png" alt="Logo SENAI" class="img-fluid w-25">
-                        <h4 class="text-light">Azure AI-900</h4>
-                        <p class="fs-5">Fundamentos das tecnologias de inteligência artificial da Azure.</p>
-                        <a href="https://www.sp.senai.br/curso/implantacao-de-servicos-de-inteligencia-artificial-em-nuvem-microsoft-ai-900/97709/" target="_blank" class="btn btn-lg">Saiba mais</a>
-                    </div>
+                <!-- Outro exemplo -->
+                <div class="col text-center">
+                    <h5 class="text-light">Certificação Internacional</h5>
+                    <img src="img/logoMicrosoft.svg" alt="Logo Microsoft" class="img-fluid w-25">
+                    <h4 class="text-light">Engenharia de IA</h4>
+                    <p class="fs-5">Com foco em monitoramento, pesquisa e consumo de IAs como as da OpenAI e Azure.</p>
+                    <a href="https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-engineer/" target="_blank" class="btn btn-lg">Saiba mais</a>
                 </div>
             </div>
-            <!-- Controles do Carrossel -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#formacoesCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
         </div>
-        <!-- Exibição em telas maiores -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 d-none d-lg-flex">
-            <!-- Conteúdo existente para desktop -->
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Leituras Técnicas - Carrossel -->
-<section class="py-5">
-    <div class="container">
-        <h3 class="text-center mb-4 text-light">Leituras Técnicas</h3>
-        <div id="leiturasCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Livro 1 -->
-                <div class="carousel-item active">
-                    <div class="text-center">
-                        <h4 class="text-light">Entendendo Algoritmos e Estrutura de Dados</h4>
-                        <img src="img/EntendendoAlgoritmos.jpg" alt="Entendendo Algoritmos" class="img-fluid mb-3 w-50">
-                        <p class="fs-5">Com capítulos sobre ordenação, busca, recursão, grafos; o livro torna temas técnicos acessíveis e divertidos.</p>
-                        <a href="" target="_blank" class="btn btn-lg">Comprar</a>
+    <!-- Leituras Técnicas -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="text-center mb-4 text-light">Leituras Técnicas</h3>
+
+            <!-- Carrossel para telas menores -->
+            <div id="leiturasCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Livro 1 -->
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <h4 class="text-light">Entendendo Algoritmos e Estrutura de Dados</h4>
+                            <img src="img/EntendendoAlgoritmos.jpg" alt="Entendendo Algoritmos" class="img-fluid mb-3 w-50">
+                            <p class="fs-5">Com capítulos sobre ordenação, busca, recursão, grafos; o livro torna temas técnicos acessíveis e divertidos.</p>
+                            <a href="" target="_blank" class="btn btn-lg">Comprar</a>
+                        </div>
                     </div>
+                    <!-- Livro 2 -->
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <h4 class="text-light">Código Limpo</h4>
+                            <img src="img/CodigoLimpo.jpg" alt="Código Limpo" class="img-fluid mb-3 w-50">
+                            <p class="fs-5">Histórias reais, ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
+                            <a href="" target="_blank" class="btn btn-lg">Comprar</a>
+                        </div>
+                    </div>
+                    <!-- Livro 3 -->
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <h4 class="text-light">Arquitetura Limpa</h4>
+                            <img src="img/ArquiteturaLimpa.jpg" alt="Arquitetura Limpa" class="img-fluid mb-3 w-50">
+                            <p class="fs-5">Conceitos como dependência inversa e o papel dos casos de uso. Orientado para estruturar softwares que sobrevivem ao tempo.</p>
+                            <a href="" target="_blank" class="btn btn-lg">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles do Carrossel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#leiturasCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#leiturasCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+
+            <!-- Grade para telas maiores -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-none d-lg-flex">
+                <!-- Livro 1 -->
+                <div class="col text-center">
+                    <h4 class="text-light">Entendendo Algoritmos e Estrutura de Dados</h4>
+                    <img src="img/EntendendoAlgoritmos.jpg" alt="Entendendo Algoritmos" class="img-fluid mb-3 w-50">
+                    <p class="fs-5">Com capítulos sobre ordenação, busca, recursão, grafos; o livro torna temas técnicos acessíveis e divertidos.</p>
+                    <a href="" target="_blank" class="btn btn-lg">Comprar</a>
                 </div>
                 <!-- Livro 2 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h4 class="text-light">Código Limpo</h4>
-                        <img src="img/CodigoLimpo.jpg" alt="Código Limpo" class="img-fluid mb-3 w-50">
-                        <p class="fs-5">Com histórias reais, o livro aborda temas como ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
-                        <a href="" target="_blank" class="btn btn-lg">Comprar</a>
-                    </div>
+                <div class="col text-center">
+                    <h4 class="text-light">Código Limpo</h4>
+                    <img src="img/CodigoLimpo.jpg" alt="Código Limpo" class="img-fluid mb-3 w-50">
+                    <p class="fs-5">Histórias reais, ética no desenvolvimento, comunicação eficiente e a importância de escrever códigos legíveis e de qualidade.</p>
+                    <a href="" target="_blank" class="btn btn-lg">Comprar</a>
                 </div>
                 <!-- Livro 3 -->
-                <div class="carousel-item">
-                    <div class="text-center">
-                        <h4 class="text-light">Arquitetura Limpa</h4>
-                        <img src="img/ArquiteturaLimpa.jpg" alt="Arquitetura Limpa" class="img-fluid mb-3 w-50">
-                        <p class="fs-5">Conceitos como dependência inversa e o papel dos casos de uso. Orientado para ajudar a estruturar softwares que sobrevivem ao teste do tempo.</p>
-                        <a href="" target="_blank" class="btn btn-lg">Comprar</a>
-                    </div>
+                <div class="col text-center">
+                    <h4 class="text-light">Arquitetura Limpa</h4>
+                    <img src="img/ArquiteturaLimpa.jpg" alt="Arquitetura Limpa" class="img-fluid mb-3 w-50">
+                    <p class="fs-5">Conceitos como dependência inversa e o papel dos casos de uso. Orientado para estruturar softwares que sobrevivem ao tempo.</p>
+                    <a href="" target="_blank" class="btn btn-lg">Comprar</a>
                 </div>
             </div>
-            <!-- Controles do Carrossel -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#leiturasCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#leiturasCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
         </div>
-        <!-- Exibição em telas maiores -->
-        <div class="row g-4 d-none d-lg-flex">
-            <!-- Conteúdo existente para desktop -->
-        </div>
-    </div>
-</section>
-
+    </section>
 
 
     <div id="contatos"></div>
