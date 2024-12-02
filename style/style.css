@@ -1,12 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
     line-height: 1.6;
     color: #facc15;
-    scroll-behavior: smooth;
-    margin: 0;
 }
-#leituras, #formacoes, #sobreMim, #habilidadesProjetos, #contatos, #kaique{
+div#resumoProfissional{
     background-color: #1e293b;
-    height: 5vh;
+    height: 1vh;
+}
+#leituras, #formacoes, #sobreMim, #habilidadesProjetos, #contatos{
+    background-color: #1e293b;
+    height: 9vh;
 }
 #contatos{
     border-top: 2px solid #facc15;
@@ -83,7 +89,9 @@ footer {
 footer a i{
     padding: 0.3em;
 }
-
+p{
+    font-size: 1.2em;
+}
 /* Ajustes do carrosel feito em bootstrap */
 @media (max-width: 950px) {
     .carousel-item img {
