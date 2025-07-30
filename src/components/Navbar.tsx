@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { Info, navPag } from '@/hooks/contents/Info';
 import { AlignJustify, X } from "lucide-react";
 
+
 const NavBar = () => {
+    const navPag = useContext(Info);
     {/*Ativa ou não, o menu hamburguer*/}
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -22,14 +25,6 @@ const NavBar = () => {
         }
       };
 
-      const navPag = [
-        { href: "#quem-sou", label: "Sobre-mim" },
-        { href: "#servicos", label: "Serviços" },
-        { href: "#formacoes", label: "Formações" },
-        { href: "#certificados", label: "Certificados" },
-        { href: "#cursos", label: "Extracurriculares" },
-        { href: "#contato", label: "Entre em Contato" },
-      ];
 
       return (
         <nav

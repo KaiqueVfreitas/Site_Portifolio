@@ -1,1 +1,2 @@
 Header, toda a parte de navegação estará nestá branch
+Footer, parte final do site (créditos, navegação, etc..)
