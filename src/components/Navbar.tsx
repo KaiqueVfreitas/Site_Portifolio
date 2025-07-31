@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Info, navPag } from '@/hooks/contents/Info';
+import { Info, navPag } from '@/hooks/contents/NavPagContext';
 import { AlignJustify, X } from "lucide-react";
 
 
