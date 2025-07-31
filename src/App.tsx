@@ -5,14 +5,16 @@ import NotFound from './pages/NotFound';
 import { TooltipProvider } from "@/components/ui/tooltip";
 import './App.css';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
+import { InfoProvider } from "@/providers/InfoProvider";
 const queryClient = new QueryClient();
 function App() {
 
   return (
     <>
-    {/*Hashrouter, pois o projeto ficará no GitHub Pages*/}
-    <QueryClientProvider client={queryClient}>
+    {/*InfoProvider centraliza os dados globais do site*/}
+    <InfoProvider> 
+{/*Hashrouter, pois o projeto ficará no GitHub Pages*/}
+<QueryClientProvider client={queryClient}>
     <TooltipProvider>
     <HashRouter>
         <Routes>
@@ -22,6 +24,8 @@ function App() {
       </HashRouter>
     </TooltipProvider>
     </QueryClientProvider>
+    </InfoProvider>
+    
       
     </>
   )

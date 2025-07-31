@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 export interface SocialMedia {
-  icon: any;
+  icon: React.ElementType;
   label: string;
   href: string;
   color: string;
