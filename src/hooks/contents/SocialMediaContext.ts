@@ -8,11 +8,11 @@ import {
   Mic,
   Send,
 } from "lucide-react";
-
+/*HREF, vai se manter opcional, enquanto todas as redes sociais que pretendo ter não forem criadas*/
 export interface SocialMedia {
   icon: React.ElementType;
   label: string;
-  href: string;
+  href?: string;
   color: string;
 }
 
