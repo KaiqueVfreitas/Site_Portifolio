@@ -1,2 +1,5 @@
-Header, toda a parte de navegação estará nestá branch
-Footer, parte final do site (créditos, navegação, etc..)
+Header, toda a parte de navegação estará nestá branch;
+
+Footer, parte final do site (créditos, navegação, etc..);
+
+HeroSection, componente que será o primeiro visto ao abrir o projeto
