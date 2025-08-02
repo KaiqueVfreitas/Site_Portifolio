@@ -3,3 +3,7 @@ Header, toda a parte de navegação estará nestá branch;
 Footer, parte final do site (créditos, navegação, etc..);
 
 HeroSection, componente que será o primeiro visto ao abrir o projeto
+
+InfoContatos, branch que foi desenvolvido o componente ContactSection
+
+ServicesSection, branch que foi desenvolvido o componente ServicesSection
