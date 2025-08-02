@@ -2,12 +2,12 @@ import { createContext } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 
-/*HREF, vai se manter opcional, enquanto todas as redes sociais que pretendo ter não forem criadas*/
+
 export interface ContactInfo {
   icon: React.ElementType;
   label: string;
   value: string;
-  href?: string; 
+  href: string; 
 }
 
 export const infoContato: ContactInfo[] = [
@@ -27,6 +27,7 @@ export const infoContato: ContactInfo[] = [
     icon: MapPin,
     label: "Localização",
     value: "Osasco, São Paulo, Brasil",
+    href: "",
   },
 ];
 
