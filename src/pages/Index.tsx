@@ -7,7 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 
 const Index = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-background">
             <Header />
             <HeroSection />
             <ServicesSection />
