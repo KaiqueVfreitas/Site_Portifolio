@@ -6,13 +6,13 @@ import Technical from "@/components/Education/TechnicalComponent";
 
 const EducationSection = () => {
    return(
-      <div className="h-10 w-10">
+      <>
          <Graduate />
          <Certificate />
          <Courses />
          <Extracurricular />
          <Technical />
-      </div>
+      </>
    );
 };
 
