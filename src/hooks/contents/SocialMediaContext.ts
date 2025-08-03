@@ -26,13 +26,13 @@ export const redesSociais: SocialMedia[] = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/kaique-vieira-freitas/",
     color: "hover:text-accent",
   },
   {
     icon: Hash,
     label: "Threads",
-    href: "#",
+    href: "https://www.threads.net/@kaiquevfreita",
     color: "hover:text-primary",
   },
   {
@@ -56,7 +56,7 @@ export const redesSociais: SocialMedia[] = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    href: "#",
+    href: "http://wa.me/5511933156578",
     color: "hover:text-primary",
   },
   {
