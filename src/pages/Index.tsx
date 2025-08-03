@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from '@/components/HeroSection';
-import { Contact } from "lucide-react";
+import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
 import ServicesSection from "@/components/ServicesSection";
 
@@ -12,6 +12,7 @@ const Index = () => {
             <HeroSection />
             <ServicesSection />
             <ContactSection />
+            <EducationSection />
             <Footer />
         </div>
     )
