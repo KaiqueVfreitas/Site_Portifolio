@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import HeroSection from '@/components/HeroSection';
-import EducationSection from "@/components/EducationSection";
-import ContactSection from "@/components/ContactSection";
-import ServicesSection from "@/components/ServicesSection";
+import Header from "@/sections/Header";
+import Footer from "@/sections/Footer";
+import HeroSection from '@/sections/HeroSection';
+import EducationSection from "@/sections/EducationSection";
+import ContactSection from "@/sections/ContactSection";
+import ServicesSection from "@/sections/ServicesSection";
 
 const Index = () => {
     return (
