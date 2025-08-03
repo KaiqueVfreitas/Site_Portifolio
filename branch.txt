@@ -9,3 +9,5 @@ InfoContatos, branch que foi desenvolvido o componente ContactSection
 ServicesSection, branch que foi desenvolvido o componente ServicesSection
 
 Formacoes, branch que conta sobre minhas competencias técnicas
+
+Exper, branch para criar a section de experiencia profissional
