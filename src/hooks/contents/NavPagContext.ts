@@ -1,4 +1,5 @@
 import { createContext } from "react";
+
 import {
    GraduationCap,
    Wrench,
@@ -17,6 +18,7 @@ export const navPag: NavItem[] = [
   { href: "#quem-sou", label: "Sobre-mim" },
   { href: "#servicos", label: "Serviços" },
   { href: "#contato", label: "Entre em Contato" },
+  { href: "#experiencia", label: "Atuação Profissional" },
 ];
 
 export const subFormacoes: NavItem[] = [

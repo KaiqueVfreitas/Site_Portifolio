@@ -4,6 +4,7 @@ import HeroSection from '@/sections/HeroSection';
 import EducationSection from "@/sections/EducationSection";
 import ContactSection from "@/sections/ContactSection";
 import ServicesSection from "@/sections/ServicesSection";
+import ExperienceSection from "@/sections/ExperienceSection";
 
 const Index = () => {
     return (
@@ -12,6 +13,7 @@ const Index = () => {
             <HeroSection />
             <ServicesSection />
             <ContactSection />
+            <ExperienceSection/>
             <EducationSection />
             <Footer />
         </div>
