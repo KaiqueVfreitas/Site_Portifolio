@@ -21,7 +21,7 @@ export const navPag: NavItem[] = [
 
 export const subFormacoes: NavItem[] = [
   { href: "#formacoes", label: "Superior", icon: GraduationCap },
-  { href: "#tecnico", label: "Técnico", icon: Wrench },
+  { href: "#formacoes", label: "Técnico", icon: Wrench },
   { href: "#certificados", label: "Certificados", icon: Award },
   { href: "#cursos", label: "Extracurriculares", icon: Book },
 ];

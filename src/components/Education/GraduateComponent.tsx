@@ -5,8 +5,20 @@ const GraduateComponent = () => {
       {
          title: "Bacharelado em Ciência da Computação",
          institution: "Anhembi Morumbi",
-         period: "2025 - 2030",
+         period: "Jun/2025 - Jun/2030",
          description: "Base técnica para diferentes areas da tecnologia, abrangendo IA, cloud, cybersecurity e engenharia de software, aliando teoria à prática.",
+       },
+       {
+         title: "Técnico em Desenvolvimento de Sistemas",
+         institution: "ETEC",
+         period: "Jun/2023 - Dez/2024",
+         description: "Foco principal nas tecnologias da .NET: C#, ASP.NET, Entity Framework, Windows Forms, Typescript/Javascript e SQL Server.",
+       },
+       {
+         title: "Técnico em Análise de Dados",
+         institution: "Hashtag Treinamentos",
+         period: "Jun/2023 - Dez/2024",
+         description: "Estática, Probabilidade, Python, SQL, Excel Avançado, Power BI e diferentes tipos de análise para diferentes tipos de KPIs.",
        },
    ]
    
@@ -22,7 +34,7 @@ const GraduateComponent = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {formations.map((formation, index) => (
               <div
                 key={index}
